@@ -1,0 +1,16 @@
+# Web 服务配置文件
+
+server:
+  host: "127.0.0.1"
+  port: 8848
+
+# 下载默认配置
+download:
+  default_path: "./Downloaded/"
+  default_thread: 5
+  max_concurrent_tasks: 3
+
+# 数据库配置
+database:
+  enabled: true
+  path: "./dy_downloader.db"

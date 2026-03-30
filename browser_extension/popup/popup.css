@@ -1,0 +1,419 @@
+/**
+ * Popup 界面样式
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #FF2E63;
+  --primary-hover: #E52550;
+  --secondary-color: #08F;
+  --success-color: #00C851;
+  --error-color: #FF4444;
+  --warning-color: #FFBB33;
+  --info-color: #33B5E5;
+  --text-primary: #1A1A1A;
+  --text-secondary: #666;
+  --text-muted: #999;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F5;
+  --border-color: #E0E0E0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.15);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+body {
+  width: 380px;
+  min-height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ============== 头部 ============== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo svg {
+  color: var(--primary-color);
+}
+
+.logo h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.status-dot.online {
+  background: var(--success-color);
+}
+
+.status-dot.offline {
+  background: var(--error-color);
+}
+
+/* ============== 快速下载 ============== */
+
+.quick-download {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quick-download h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+#urlInput {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#urlInput:focus {
+  border-color: var(--secondary-color);
+}
+
+#urlInput:disabled {
+  background: var(--bg-secondary);
+  cursor: not-allowed;
+}
+
+/* ============== 按钮 ============== */
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-link {
+  background: none;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+}
+
+.btn-link:hover {
+  color: var(--text-primary);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  color: var(--text-primary);
+}
+
+/* ============== 活动任务 ============== */
+
+.tasks-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.count {
+  padding: 2px 8px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.task-info {
+  margin-bottom: 8px;
+}
+
+.task-url {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.task-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.task-status {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.status-queued {
+  background: var(--info-color);
+  color: white;
+}
+
+.status-downloading {
+  background: var(--warning-color);
+  color: white;
+}
+
+.status-completed {
+  background: var(--success-color);
+  color: white;
+}
+
+.status-failed,
+.status-cancelled {
+  background: var(--error-color);
+  color: white;
+}
+
+.task-progress {
+  color: var(--text-secondary);
+}
+
+.task-message {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* ============== 历史记录 ============== */
+
+.history-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.history-item:hover {
+  background: #E8E8E8;
+}
+
+.history-title {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.history-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ============== 底部 ============== */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* ============== 空状态/错误状态 ============== */
+
+.empty-state,
+.error-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+
+.empty-state p,
+.error-state p {
+  font-size: 13px;
+}
+
+/* ============== Toast ============== */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast-success {
+  background: var(--success-color);
+}
+
+.toast-error {
+  background: var(--error-color);
+}
+
+.toast-info {
+  background: var(--info-color);
+}
+
+/* ============== 滚动条 ============== */
+
+.tasks-section,
+.history-section {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-muted) var(--bg-secondary);
+}
+
+.tasks-section::-webkit-scrollbar,
+.history-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasks-section::-webkit-scrollbar-track,
+.history-section::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.tasks-section::-webkit-scrollbar-thumb,
+.history-section::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}

@@ -1,0 +1,90 @@
+/**
+ * 抖音下载器内容脚本样式
+ */
+
+/* 下载按钮样式 */
+.dy-download-btn {
+  padding: 8px 16px !important;
+  margin: 0 8px !important;
+  background: #FF2E63 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: background 0.2s ease !important;
+}
+
+.dy-download-btn:hover {
+  background: #E52550 !important;
+}
+
+.dy-download-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* 批量下载容器 */
+.dy-batch-download-container {
+  margin: 12px 0 !important;
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+/* 批量下载按钮 */
+.dy-batch-download-btn {
+  padding: 8px 16px !important;
+  background: #0088FF !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  transition: background 0.2s ease !important;
+}
+
+.dy-batch-download-btn:hover {
+  background: #0077EE !important;
+}
+
+/* Toast 通知样式 */
+.dy-toast {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  padding: 12px 20px !important;
+  color: white !important;
+  border-radius: 4px !important;
+  z-index: 999999 !important;
+  font-size: 14px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+  animation: dy-slideIn 0.3s ease !important;
+}
+
+.dy-toast-success {
+  background: #00C851 !important;
+}
+
+.dy-toast-error {
+  background: #FF4444 !important;
+}
+
+.dy-toast-info {
+  background: #33B5E5 !important;
+}
+
+@keyframes dy-slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes dy-slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}

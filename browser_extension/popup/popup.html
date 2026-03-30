@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抖音下载器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm-1 6h2v2h-2V8zm0 4h2v6h-2v-6z"/>
+        </svg>
+        <h1>抖音下载器</h1>
+      </div>
+      <div id="serviceStatus" class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text">检查中...</span>
+      </div>
+    </header>
+
+    <!-- 快速下载区域 -->
+    <section class="quick-download">
+      <h2>快速下载</h2>
+      <div class="input-group">
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="粘贴抖音视频/用户链接..."
+          autocomplete="off"
+        >
+        <button id="downloadBtn" class="btn btn-primary">下载</button>
+      </div>
+    </section>
+
+    <!-- 活动任务 -->
+    <section class="tasks-section">
+      <div class="section-header">
+        <h2>活动任务</h2>
+        <span id="taskCount" class="count">0</span>
+      </div>
+      <div id="taskList" class="task-list">
+        <div class="empty-state">
+          <p>暂无活动任务</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 历史记录 -->
+    <section class="history-section">
+      <div class="section-header">
+        <h2>最近下载</h2>
+        <button id="refreshHistory" class="btn-icon" title="刷新">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+        </button>
+      </div>
+      <div id="historyList" class="history-list">
+        <div class="empty-state">
+          <p>暂无下载记录</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <button id="openSettings" class="btn btn-link">设置</button>
+      <button id="openHelp" class="btn btn-link">帮助</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
