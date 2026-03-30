@@ -42,3 +42,9 @@ Thumbs.db
 
 # Claude
 .claude/
+
+# Build
+build/
+*.zip
+release-notes.md
+version.txt

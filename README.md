@@ -48,6 +48,30 @@ websockets
 pyyaml
 ```
 
+## 📥 下载安装
+
+### 方式一：从 GitHub Releases 下载 ⭐ 推荐
+
+**[🚀 下载最新版本](https://github.com/majnn/douyin-downloader/releases/latest)**
+
+#### 下载选项：
+
+| 文件 | 说明 | 推荐度 |
+|------|------|--------|
+| **douyin-downloader.zip** | 完整项目包，包含所有文件，开箱即用 | ⭐⭐⭐⭐⭐ |
+| **browser-extension.zip** | 仅浏览器扩展，适合已有Web服务的用户 | ⭐⭐⭐ |
+
+**详细安装说明**: 查看 [INSTALL.md](INSTALL.md) 获取完整的图文安装指南。
+
+### 方式二：从源代码安装
+
+```bash
+git clone https://github.com/majnn/douyin-downloader.git
+cd douyin-downloader
+```
+
+然后按照下面的"快速开始"章节进行操作。
+
 ## 🚀 快速开始
 
 ### 方式一：使用启动脚本（推荐）
