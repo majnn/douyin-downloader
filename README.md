@@ -2,6 +2,8 @@
 
 一个功能强大的抖音视频下载工具，支持单个视频下载、批量下载用户作品、收藏夹下载等功能。采用 **浏览器扩展 + 本地Web服务** 的架构，提供一键下载的便捷体验。
 
+> 本项目是基于 [jiji262/douyin-downloader](https://github.com/jiji262/douyin-downloader) 的修改版本，感谢原作者的出色工作！
+
 ![GitHub Repo stars](https://img.shields.io/github/stars/majnn/douyin-downloader)
 ![GitHub forks](https://img.shields.io/github/forks/majnn/douyin-downloader)
 ![GitHub issues](https://img.shields.io/github/issues/majnn/douyin-downloader)
@@ -425,6 +427,14 @@ douyin-downloader/
 ## 📄 许可证
 
 本项目采用 **MIT 许可证** - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+### 致谢
+
+本项目是基于 [jiji262/douyin-downloader](https://github.com/jiji262/douyin-downloader) 的修改版本，原始项目采用 MIT 许可证开源。
+
+**原始项目**: [jiji262/douyin-downloader](https://github.com/jiji262/douyin-downloader) ⭐
+
+感谢原作者 [jiji262](https://github.com/jiji262) 的出色贡献！
 
 ## ⚠️ 免责声明
 
