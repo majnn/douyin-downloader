@@ -380,6 +380,36 @@ douyin-downloader/
 - 遵循现有代码风格
 - 测试新功能是否正常工作
 
+## 📦 版本发布（维护者）
+
+### 发布新版本
+
+1. **打包项目**
+   ```bash
+   # Windows
+   build.bat
+
+   # Linux/Mac
+   chmod +x build.sh
+   ./build.sh
+   ```
+
+2. **创建 GitHub Release**
+   ```bash
+   # Windows
+   release.bat
+
+   # Linux/Mac
+   ./release.sh
+   ```
+
+3. **发布说明会自动生成**，包含下载说明和功能介绍
+
+### 依赖要求
+
+- 安装 [GitHub CLI](https://cli.github.com/)
+- 运行 `gh auth login` 完成认证
+
 ## 📝 更新日志
 
 ### v1.0.0 (2025-03-30)
